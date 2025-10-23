@@ -28,7 +28,7 @@ Our AI-powered AML detection system provides:
 
 ### Overall System Architecture
 
-![Overall AML System Architecture](Gemini_Generated_Image_4dukfv4dukfv4duk.png)
+![Overall AML System Architecture](images/architecture.png)
 
 The diagram above presents the high-level architecture of the AI-powered Anti-Money Laundering (AML) detection system. It shows the journey from ingesting raw transaction data, through specialized AI agents operating within a LangGraph-orchestrated workflow, all the way to regulatory compliance and continuous improvement.
 
@@ -91,7 +91,7 @@ flowchart LR
 
 ### AML Detection Workflow Diagram
 
-![AML Detection Workflow](sample_graph_workflow.png)
+![AML Detection Workflow](images/sample_graph_workflow.png)
 
 The workflow diagram above illustrates the complete AML detection process, showing:
 
