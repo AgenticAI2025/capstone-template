@@ -122,8 +122,14 @@ Team_FinTrack_AI/
 ├── sar_drafts/                    # Generated SAR PDFs/TXTs
 ├── aml_report.csv                 # Risk assessment results
 ├── aml_report_with_typology.csv   # Enhanced dataset with typologies
-├── app.py                         # Streamlit dashboard
+├── app.py                         # Streamlit dashboard (sample implementation)
 ├── requirements.txt               # Dependencies
+├── env.example                    # Environment configuration template
+├── images/                        # Dashboard screenshots and diagrams
+│   ├── dashboard-sample-1.png     # Main dashboard view
+│   ├── dashboard-sample-2.png     # Typology analysis view
+│   ├── architecture.png           # System architecture diagram
+│   └── sample_graph_workflow.png  # AML workflow diagram
 └── presentation_slides.pptx       # Final presentation
 ```
 
@@ -133,7 +139,41 @@ Team_FinTrack_AI/
 
 - Python 3.8+
 - OpenAI API key
-- Langfuse API key
+- LangSmith API key (for monitoring and evaluation)
+- Langfuse API key (for observability)
+
+### Environment Configuration
+
+The project includes a comprehensive environment template (`env.example`) with all necessary configuration options:
+
+#### Required API Keys
+- **OpenAI API Key**: For LLM-powered risk assessment
+- **LangSmith API Key**: For model evaluation and monitoring
+- **Langfuse API Key**: For observability and tracing
+
+#### Optional Configurations
+- **Database Settings**: SQLite (default) or PostgreSQL options
+- **Vector Database**: For KYC vector storage
+- **Security Settings**: Host configurations and secret keys
+- **Agent Configuration**: Concurrent investigations and timeouts
+- **Monitoring**: Metrics and logging configurations
+
+**Sample Environment File Structure**:
+```bash
+# OpenAI Configuration
+OPENAI_API_KEY=your_openai_api_key_here
+
+# LangSmith Configuration  
+LANGSMITH_API_KEY=your_langsmith_api_key_here
+LANGSMITH_PROJECT=aml-multi-agent-system
+
+# Database Configuration
+DATABASE_URL=sqlite:///./data/aml_database.db
+
+# Application Configuration
+DEBUG=false
+LOG_LEVEL=INFO
+```
 
 ### Installation
 
@@ -153,11 +193,24 @@ Team_FinTrack_AI/
    cp capstone-template/env.example .env
    # Edit .env with your API keys
    ```
+   
+   **Note**: The `env.example` file contains a comprehensive template with all required environment variables including:
+   - OpenAI API configuration
+   - LangSmith monitoring setup
+   - Database configuration options
+   - Security and application settings
 
 4. **Run the dashboard**:
    ```bash
    streamlit run app.py
    ```
+   
+   **Sample Dashboard**: The repository includes a complete sample Streamlit dashboard (`app.py`) that demonstrates:
+   - Interactive filtering and data visualization
+   - Real-time metrics and KPIs
+   - Typology analysis with color-coded badges
+   - Comprehensive case analysis with risk assessment
+   - SAR (Suspicious Activity Report) monitoring
 
 ## 🔧 Implementation Steps
 
@@ -203,6 +256,30 @@ Team_FinTrack_AI/
 ## 🎨 Dashboard Features
 
 ### Enhanced AML Detection Dashboard
+
+The AML Detection Dashboard provides a comprehensive interface for monitoring and analyzing anti-money laundering activities with advanced visualization and filtering capabilities.
+
+#### Dashboard Screenshots
+
+**Main Dashboard View**
+![AML Detection Dashboard - Main View](images/dashboard-sample-1.png)
+
+The main dashboard displays:
+- **Header Section**: Gradient banner with AML Detection Dashboard title
+- **Filters & Controls**: Interactive dropdowns for Risk Level, Typology, and SAR Status
+- **Key Metrics**: Four metric cards showing Total Cases, SAR Required, SAR Rate, and Typology Types
+- **Real-time Data**: Dynamic updates based on filter selections
+
+**Typology Analysis View**
+![AML Detection Dashboard - Typology Analysis](images/dashboard-sample-2.png)
+
+The typology analysis section includes:
+- **Typology Cards**: Visual cards showing case counts for each typology (UNCLASSIFIED, LAYERING, STRUCTURING)
+- **Distribution Chart**: Pie chart displaying the percentage breakdown of AML typologies
+- **Color-coded Categories**: Each typology has distinct colors and stage indicators
+- **Detailed Insights**: Comprehensive analysis of typology distribution and rationale
+
+#### Key Features
 
 - **🎨 Colorful UI**: Modern gradient design with custom CSS styling
 - **📊 Interactive Charts**: Pie charts and bar graphs for data visualization
@@ -257,12 +334,31 @@ system = AMLDetectionSystem()
 result = system.analyze_transaction(transaction_data)
 ```
 
-### Dashboard Navigation
+### Sample Dashboard Implementation
+
+The sample `app.py` file demonstrates a complete Streamlit dashboard implementation with the following components:
+
+#### Core Features
+- **Data Loading**: Reads CSV data from `aml_report_with_typology.csv`
+- **Custom Styling**: Comprehensive CSS styling with gradients and color schemes
+- **Interactive Filters**: Dropdown filters for risk level, typology, and SAR status
+- **Dynamic Metrics**: Real-time calculation of key performance indicators
+- **Visualization**: Plotly charts for typology distribution and risk analysis
+- **Responsive Design**: Adaptive layout that works across different screen sizes
+
+#### Dashboard Navigation
 1. **Filters**: Use filter controls to narrow down cases
 2. **Metrics**: View key performance indicators
 3. **Charts**: Analyze typology distribution and risk patterns
 4. **Case Analysis**: Review detailed case information
 5. **SAR Summary**: Focus on cases requiring SAR filing
+
+#### Technical Implementation
+- **Streamlit Framework**: Modern web app framework for data science applications
+- **Plotly Integration**: Interactive charts and visualizations
+- **Pandas Data Processing**: Efficient data manipulation and filtering
+- **CSS Styling**: Custom styling for professional appearance
+- **Responsive Layout**: Multi-column layouts that adapt to content
 
 ## 📈 Evaluation Metrics
 
