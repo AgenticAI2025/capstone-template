@@ -4,6 +4,38 @@
 
 The goal of this capstone project is to develop an advanced AI-powered Anti-Money Laundering (AML) detection system that can effectively identify and assess complex suspicious activities in financial transactions. The overall objective is to deliver a robust, scalable, and transparent solution leveraging state-of-the-art AI technologies and workflow orchestration to enhance AML processes within financial institutions. The intended outcome is a system capable of real-time detection, dynamic risk assessment, automated regulatory reporting, and comprehensive audit trails, ultimately supporting financial professionals in meeting compliance standards and proactively combating money laundering threats.
 
+### 📚 Project Instructions
+
+For detailed step-by-step instructions, please refer to the comprehensive **Capstone Project Instructions** document:
+
+**[📖 AML_CAPSTONE_INSTRUCTIONS.md](AML_CAPSTONE_INSTRUCTIONS.md)**
+
+This document contains:
+- **Complete Project Phases**: 7 detailed phases with specific tasks and deliverables
+- **Learning Outcomes**: Clear objectives for each phase
+- **Implementation Guidance**: Step-by-step instructions with hints and tips
+- **Evaluation Criteria**: Detailed marking scheme and assessment framework
+- **Troubleshooting**: Common issues and solutions
+- **Resource Links**: Documentation and learning resources
+
+**Quick Start**: Begin with Phase 1 (Setup & Orientation) and follow the instructions sequentially through Phase 7 (Reporting & Dashboard).
+
+### 📊 Project Phases Overview
+
+The capstone project is structured into **7 comprehensive phases**:
+
+| Phase | Focus Area | Duration | Marks | Key Deliverables |
+|-------|------------|----------|-------|------------------|
+| **Phase 1** | Setup & Orientation | ~1 hour | 10 | Environment setup, API keys, connectivity |
+| **Phase 2** | Graph & State Design | ~1.5 hours | 15 | AMLState definition, graph structure |
+| **Phase 3** | Risk Logic Implementation | ~2 hours | 20 | LLM-powered risk analysis nodes |
+| **Phase 4** | Dynamic Routing & Decision Logic | ~1.5 hours | 15 | Risk aggregation, conditional routing |
+| **Phase 5** | Langfuse Integration | ~2 hours | 15 | Observability and experiment tracking |
+| **Phase 6** | Evaluation & Scoring | ~2 hours | 15 | Performance evaluation and metrics |
+| **Phase 7** | Reporting & Dashboard | ~1.5 hours | 10 | SAR generation, typology classification |
+
+**Total Marks: 100**
+
 ## 🎯 Problem Statement
 
 The global financial ecosystem is under constant threat from highly sophisticated and evolving money laundering activities. Criminals now exploit advanced technologies and intricate financial channels to conceal the origins of illicit funds, making detection increasingly challenging. Traditional rule-based systems and manual review processes used by financial institutions are often inadequate at identifying complex schemes that span international borders, leverage digital assets, and hide behind layers of anonymity.
@@ -120,11 +152,14 @@ Team_FinTrack_AI/
 ├── Step7_Reporting                # Reporting & visualization
 ├── Final_Project                  # Integrated running application
 ├── sar_drafts/                    # Generated SAR PDFs/TXTs
+├── data/                          # Sample data and test cases
+│   └── sample_cases.json          # Test transaction data for development
 ├── aml_report.csv                 # Risk assessment results
 ├── aml_report_with_typology.csv   # Enhanced dataset with typologies
 ├── app.py                         # Streamlit dashboard (sample implementation)
 ├── requirements.txt               # Dependencies
 ├── env.example                    # Environment configuration template
+├── AML_CAPSTONE_INSTRUCTIONS.md  # Comprehensive project instructions
 ├── images/                        # Dashboard screenshots and diagrams
 │   ├── dashboard-sample-1.png     # Main dashboard view
 │   ├── dashboard-sample-2.png     # Typology analysis view
@@ -134,6 +169,8 @@ Team_FinTrack_AI/
 ```
 
 ## 🚀 Quick Start
+
+> **📋 Important**: Before starting, please read the **[AML_CAPSTONE_INSTRUCTIONS.md](AML_CAPSTONE_INSTRUCTIONS.md)** for complete project guidance, phase-by-phase instructions, and evaluation criteria.
 
 ### Prerequisites
 
@@ -329,9 +366,22 @@ The typology analysis section includes:
 ```python
 # Initialize the AML detection system
 from aml_detection import AMLDetectionSystem
+import json
+
+# Load sample test data
+with open('data/sample_cases.json', 'r') as f:
+    sample_cases = json.load(f)
 
 system = AMLDetectionSystem()
-result = system.analyze_transaction(transaction_data)
+
+# Analyze a single transaction
+result = system.analyze_transaction(sample_cases[0])
+
+# Process all sample cases
+results = []
+for case in sample_cases:
+    result = system.analyze_transaction(case)
+    results.append(result)
 ```
 
 ### Sample Dashboard Implementation
@@ -339,12 +389,13 @@ result = system.analyze_transaction(transaction_data)
 The sample `app.py` file demonstrates a complete Streamlit dashboard implementation with the following components:
 
 #### Core Features
-- **Data Loading**: Reads CSV data from `aml_report_with_typology.csv`
+- **Data Loading**: Reads CSV data from `aml_report_with_typology.csv` (generated from `data/sample_cases.json`)
 - **Custom Styling**: Comprehensive CSS styling with gradients and color schemes
 - **Interactive Filters**: Dropdown filters for risk level, typology, and SAR status
 - **Dynamic Metrics**: Real-time calculation of key performance indicators
 - **Visualization**: Plotly charts for typology distribution and risk analysis
 - **Responsive Design**: Adaptive layout that works across different screen sizes
+- **Test Data Integration**: Uses comprehensive test cases from `data/sample_cases.json`
 
 #### Dashboard Navigation
 1. **Filters**: Use filter controls to narrow down cases
@@ -386,7 +437,44 @@ The sample `app.py` file demonstrates a complete Streamlit dashboard implementat
 
 ## 📋 Data Requirements
 
-The system expects CSV files with the following columns:
+### Sample Test Data
+
+The project includes comprehensive test data in `data/sample_cases.json` containing **50+ transaction scenarios** for development and testing:
+
+#### Transaction Types Covered:
+- **Structuring**: Repeated sub-threshold transactions to avoid reporting thresholds
+- **High-Risk Countries**: Transactions involving sanctioned or high-risk jurisdictions
+- **PEP Transactions**: Politically Exposed Person transactions
+- **Cryptocurrency Mixers**: Crypto transactions using privacy tools
+- **Trade Invoice Mismatches**: Over/under-invoicing for money laundering
+- **Complex Payment Chains**: Multi-jurisdictional routing through tax havens
+- **Wildlife Trafficking**: Illicit trade proceeds
+- **Sanctioned Entity Bypass**: Attempts to circumvent sanctions
+
+#### Data Structure:
+```json
+{
+  "transaction": {
+    "amount": 9500,
+    "origin_country": "US",
+    "destination_country": "CA",
+    "parties": ["retail_chain_inc"],
+    "timestamp": "2025-03-27T19:20:16.639571",
+    "documents": ["Invoice #SMF-4587"],
+    "frequency": 8
+  },
+  "customer": {
+    "name": "James Smith",
+    "account_age_days": 120,
+    "transaction_history": [...]
+  },
+  "scenario": "Repeated sub-threshold transactions (structuring)"
+}
+```
+
+### Output Data Format
+
+The system generates CSV files with the following columns:
 - `Scenario`: Description of the AML scenario
 - `Overall Score`: Risk score (0-100)
 - `Level`: Risk level classification
@@ -427,6 +515,7 @@ This capstone project delivers:
 
 ## 📚 Documentation
 
+- **[AML_CAPSTONE_INSTRUCTIONS.md](AML_CAPSTONE_INSTRUCTIONS.md)**: Comprehensive project instructions with phase-by-phase guidance
 - **Phase Notebooks**: Detailed implementation for each phase
 - **API Documentation**: Complete reference for all endpoints
 - **User Guide**: Step-by-step usage instructions

@@ -1,0 +1,1502 @@
+[
+    {
+        "transaction": {
+            "amount": 9500,
+            "origin_country": "US",
+            "destination_country": "CA",
+            "parties": [
+                "retail_chain_inc"
+            ],
+            "timestamp": "2025-03-27T19:20:16.639571",
+            "documents": [
+                "Invoice #SMF-4587"
+            ],
+            "frequency": 8
+        },
+        "customer": {
+            "name": "James Smith",
+            "account_age_days": 120,
+            "transaction_history": [
+                {
+                    "amount": 9200,
+                    "timestamp": "2025-03-27T17:20:16.639571"
+                },
+                {
+                    "amount": 9350,
+                    "timestamp": "2025-03-27T15:20:16.639571"
+                }
+            ]
+        },
+        "scenario": "Repeated sub-threshold transactions (structuring)"
+    },
+    {
+        "transaction": {
+            "amount": 200000,
+            "origin_country": "IR",
+            "destination_country": "DE",
+            "parties": [
+                "tehran_exporters"
+            ],
+            "timestamp": "2025-03-27T19:20:16.639571",
+            "documents": [
+                "Trade Agreement #IR-789"
+            ]
+        },
+        "customer": {
+            "name": "Ali Reza",
+            "account_age_days": 45,
+            "transaction_history": []
+        },
+        "scenario": "High-risk country transaction"
+    },
+    {
+        "transaction": {
+            "amount": 500000,
+            "origin_country": "NG",
+            "destination_country": "CH",
+            "parties": [
+                "gov_ministry_ng"
+            ],
+            "timestamp": "2025-03-27T19:20:16.639571",
+            "documents": [
+                "Contract NG-GOV-2024"
+            ]
+        },
+        "customer": {
+            "name": "Minister Adebayo Gov",
+            "account_age_days": 10,
+            "transaction_history": []
+        },
+        "scenario": "PEP transaction"
+    },
+    {
+        "transaction": {
+            "amount": 150000,
+            "asset_type": "CRYPTO",
+            "crypto_details": {
+                "wallet_age_days": 3,
+                "mixer_used": true,
+                "cross_chain_swaps": 4
+            },
+            "timestamp": "2025-03-27T19:20:16.639571"
+        },
+        "customer": {
+            "name": "Blockchain Solutions Ltd",
+            "account_age_days": 30,
+            "transaction_history": []
+        },
+        "scenario": "Cryptocurrency mixer usage"
+    },
+    {
+        "transaction": {
+            "amount": 500000,
+            "origin_country": "CN",
+            "destination_country": "VN",
+            "parties": [
+                "textile_export_cn"
+            ],
+            "timestamp": "2025-03-27T19:20:16.639571",
+            "documents": [
+                "Invoice #TXT-2024 (5000kg silk @ $100/kg)",
+                "Customs Valuation Report (Actual Value: $300k)"
+            ]
+        },
+        "customer": {
+            "name": "Vietnam Textiles Corp",
+            "account_age_days": 60,
+            "transaction_history": []
+        },
+        "scenario": "Trade invoice mismatch"
+    },
+    {
+        "transaction": {
+            "amount": 250000,
+            "origin_country": "AE",
+            "destination_country": "LU",
+            "parties": [
+                "dubai_holdings"
+            ],
+            "timestamp": "2025-03-27T19:20:16.639571"
+        },
+        "customer": {
+            "name": "Luxembourg Investments LLC",
+            "account_age_days": 2,
+            "transaction_history": [
+                {
+                    "amount": 300000,
+                    "timestamp": "2025-03-27T07:20:16.639571"
+                }
+            ]
+        },
+        "scenario": "New account with high-value transactions"
+    },
+    {
+        "transaction": {
+            "amount": 75000,
+            "origin_country": "GB",
+            "destination_country": "VG",
+            "parties": [
+                "consulting_firm_uk",
+                "offshore_holdings_vg",
+                "shell_co_1",
+                "shell_co_2"
+            ],
+            "timestamp": "2025-03-27T19:20:16.639571",
+            "intermediate_countries": [
+                "CY",
+                "MT"
+            ]
+        },
+        "customer": {
+            "name": "UK Consulting Partners",
+            "account_age_days": 90,
+            "transaction_history": []
+        },
+        "scenario": "Complex payment chain through tax havens"
+    },
+    {
+        "transaction": {
+            "amount": 350000,
+            "origin_country": "ZA",
+            "destination_country": "MY",
+            "parties": [
+                "african_wildlife_co"
+            ],
+            "timestamp": "2025-03-27T19:20:16.639571",
+            "documents": [
+                "Ivory Shipment Permit #IV-789"
+            ]
+        },
+        "customer": {
+            "name": "Malaysian Antiques Ltd",
+            "account_age_days": 45,
+            "transaction_history": []
+        },
+        "scenario": "Wildlife trafficking proceeds"
+    },
+    {
+        "transaction": {
+            "amount": 2000000,
+            "origin_country": "RU",
+            "destination_country": "IN",
+            "parties": [
+                "sanctioned_russian_bank",
+                "intermediary_ae"
+            ],
+            "timestamp": "2025-03-27T19:20:16.639571",
+            "intermediate_countries": [
+                "AE",
+                "TR"
+            ]
+        },
+        "customer": {
+            "name": "Mumbai Imports Ltd",
+            "account_age_days": 30,
+            "transaction_history": []
+        },
+        "scenario": "Sanctioned entity bypass"
+    },
+    {
+        "transaction": {
+            "amount": 9800,
+            "origin_country": "US",
+            "destination_country": "MX",
+            "parties": ["electronics_depot"],
+            "timestamp": "2025-03-28T10:15:22.123456",
+            "documents": ["Invoice #ELD-9823"],
+            "frequency": 12
+        },
+        "customer": {
+            "name": "Maria Rodriguez",
+            "account_age_days": 95,
+            "transaction_history": [
+                {"amount": 9700, "timestamp": "2025-03-28T08:15:22.123456"},
+                {"amount": 9850, "timestamp": "2025-03-28T06:15:22.123456"}
+            ]
+        },
+        "scenario": "Repeated sub-threshold transactions (structuring)"
+    },
+    {
+        "transaction": {
+            "amount": 180000,
+            "origin_country": "SY",
+            "destination_country": "FR",
+            "parties": ["damascus_traders"],
+            "timestamp": "2025-03-28T11:20:33.234567",
+            "documents": ["Trade Agreement #SY-456"]
+        },
+        "customer": {
+            "name": "Omar Hassan",
+            "account_age_days": 38,
+            "transaction_history": []
+        },
+        "scenario": "High-risk country transaction"
+    },
+    {
+        "transaction": {
+            "amount": 750000,
+            "origin_country": "VE",
+            "destination_country": "PT",
+            "parties": ["venezuela_oil_ministry"],
+            "timestamp": "2025-03-28T12:30:44.345678",
+            "documents": ["Contract VE-GOV-2025"]
+        },
+        "customer": {
+            "name": "General Carlos Martinez Gov",
+            "account_age_days": 15,
+            "transaction_history": []
+        },
+        "scenario": "PEP transaction"
+    },
+    {
+        "transaction": {
+            "amount": 220000,
+            "asset_type": "CRYPTO",
+            "crypto_details": {
+                "wallet_age_days": 2,
+                "mixer_used": true,
+                "cross_chain_swaps": 6
+            },
+            "timestamp": "2025-03-28T13:45:55.456789"
+        },
+        "customer": {
+            "name": "CryptoVault Services",
+            "account_age_days": 25,
+            "transaction_history": []
+        },
+        "scenario": "Cryptocurrency mixer usage"
+    },
+    {
+        "transaction": {
+            "amount": 475000,
+            "origin_country": "EG",
+            "destination_country": "SA",
+            "parties": ["cairo_steel"],
+            "timestamp": "2025-04-02T09:26:14.213344",
+            "documents": [
+                "Invoice #CS-6678 (200 tons @ $2,375/ton)",
+                "Customs Valuation Report (Actual Value: $290k)"
+            ]
+        },
+        "customer": {
+            "name": "Jeddah Construction Ltd",
+            "account_age_days": 81,
+            "transaction_history": []
+        },
+        "scenario": "Trade invoice mismatch"
+    },
+    {
+        "transaction": {
+            "amount": 410000,
+            "origin_country": "JO",
+            "destination_country": "GG",
+            "parties": ["amman_capital"],
+            "timestamp": "2025-04-02T10:31:25.324455"
+        },
+        "customer": {
+            "name": "Guernsey Trust Corporation",
+            "account_age_days": 8,
+            "transaction_history": [
+                {"amount": 420000, "timestamp": "2025-04-01T22:31:25.324455"}
+            ]
+        },
+        "scenario": "New account with high-value transactions"
+    },
+    {
+        "transaction": {
+            "amount": 115000,
+            "origin_country": "SE",
+            "destination_country": "MS",
+            "parties": ["stockholm_advisors", "montserrat_shell", "shell_co_13", "shell_co_14"],
+            "timestamp": "2025-04-02T11:36:36.435566",
+            "intermediate_countries": ["GI", "JE"]
+        },
+        "customer": {
+            "name": "Swedish Corporate Services",
+            "account_age_days": 142,
+            "transaction_history": []
+        },
+        "scenario": "Complex payment chain through tax havens"
+    },
+    {
+        "transaction": {
+            "amount": 325000,
+            "origin_country": "CD",
+            "destination_country": "BE",
+            "parties": ["kinshasa_minerals"],
+            "timestamp": "2025-04-02T12:41:47.546677",
+            "documents": ["Gorilla Hand Export #GH-778"]
+        },
+        "customer": {
+            "name": "Brussels Rare Specimens",
+            "account_age_days": 53,
+            "transaction_history": []
+        },
+        "scenario": "Wildlife trafficking proceeds"
+    },
+    {
+        "transaction": {
+            "amount": 2325000,
+            "origin_country": "YE",
+            "destination_country": "OM",
+            "parties": ["sanaa_arms_dealer", "intermediary_dj"],
+            "timestamp": "2025-04-07T09:22:23.102233",
+            "intermediate_countries": ["DJ", "SO"]
+        },
+        "customer": {
+            "name": "Muscat Defense Trading",
+            "account_age_days": 35,
+            "transaction_history": []
+        },
+        "scenario": "Sanctioned entity bypass"
+    },
+    {
+        "transaction": {
+            "amount": 9370,
+            "origin_country": "ZA",
+            "destination_country": "NA",
+            "parties": ["johannesburg_exports"],
+            "timestamp": "2025-04-08T00:35:00.213344",
+            "documents": ["Invoice #JE-3345"],
+            "frequency": 20
+        },
+        "customer": {
+            "name": "Petrus van Wyk",
+            "account_age_days": 177,
+            "transaction_history": [
+                {"amount": 9270, "timestamp": "2025-04-07T22:35:00.213344"},
+                {"amount": 9470, "timestamp": "2025-04-07T20:35:00.213344"}
+            ]
+        },
+        "scenario": "Repeated sub-threshold transactions (structuring)"
+    },
+    {
+        "transaction": {
+            "amount": 215000,
+            "origin_country": "CF",
+            "destination_country": "CM",
+            "parties": ["bangui_merchants"],
+            "timestamp": "2025-04-08T01:40:11.324455",
+            "documents": ["Trade Agreement #CF-991"]
+        },
+        "customer": {
+            "name": "André Nzapali",
+            "account_age_days": 49,
+            "transaction_history": []
+        },
+        "scenario": "High-risk country transaction"
+    },
+    {
+        "transaction": {
+            "amount": 655000,
+            "origin_country": "CG",
+            "destination_country": "FR",
+            "parties": ["congo_oil_ministry"],
+            "timestamp": "2025-04-08T02:45:22.435566",
+            "documents": ["Contract CG-OIL-2025"]
+        },
+        "customer": {
+            "name": "Minister Bruno Itoua Gov",
+            "account_age_days": 21,
+            "transaction_history": []
+        },
+        "scenario": "PEP transaction"
+    },
+    {
+        "transaction": {
+            "amount": 158000,
+            "asset_type": "CRYPTO",
+            "crypto_details": {
+                "wallet_age_days": 4,
+                "mixer_used": true,
+                "cross_chain_swaps": 6
+            },
+            "timestamp": "2025-04-08T03:50:33.546677"
+        },
+        "customer": {
+            "name": "CoinJoin Services LLC",
+            "account_age_days": 21,
+            "transaction_history": []
+        },
+        "scenario": "Cryptocurrency mixer usage"
+    },
+    {
+        "transaction": {
+            "amount": 458000,
+            "origin_country": "NP",
+            "destination_country": "BD",
+            "parties": ["kathmandu_textiles"],
+            "timestamp": "2025-04-08T04:55:44.657788",
+            "documents": [
+                "Invoice #KT-7712 (2500kg @ $183.20/kg)",
+                "Customs Valuation Report (Actual Value: $278k)"
+            ]
+        },
+        "customer": {
+            "name": "Dhaka Fashion Imports",
+            "account_age_days": 84,
+            "transaction_history": []
+        },
+        "scenario": "Trade invoice mismatch"
+    },
+    {
+        "transaction": {
+            "amount": 385000,
+            "origin_country": "MV",
+            "destination_country": "MC",
+            "parties": ["male_investments"],
+            "timestamp": "2025-04-08T06:00:55.768899"
+        },
+        "customer": {
+            "name": "Monaco Capital Trust",
+            "account_age_days": 8,
+            "transaction_history": [
+                {"amount": 400000, "timestamp": "2025-04-07T18:00:55.768899"}
+            ]
+        },
+        "scenario": "New account with high-value transactions"
+    },
+    {
+        "transaction": {
+            "amount": 118000,
+            "origin_country": "IE",
+            "destination_country": "BM",
+            "parties": ["dublin_advisors", "bermuda_trust_2", "shell_co_25", "shell_co_26"],
+            "timestamp": "2025-04-08T07:06:06.879900",
+            "intermediate_countries": ["GG", "KY"]
+        },
+        "customer": {
+            "name": "Irish Financial Services",
+            "account_age_days": 214,
+            "transaction_history": []
+        },
+        "scenario": "Complex payment chain through tax havens"
+    },
+    {
+        "transaction": {
+            "amount": 335000,
+            "origin_country": "SL",
+            "destination_country": "LB",
+            "parties": ["freetown_traders"],
+            "timestamp": "2025-04-08T08:11:17.990011",
+            "documents": ["Diamond Export #DI-667"]
+        },
+        "customer": {
+            "name": "Beirut Jewelry Exchange",
+            "account_age_days": 62,
+            "transaction_history": []
+        },
+        "scenario": "Wildlife trafficking proceeds"
+    },
+    {
+        "transaction": {
+            "amount": 1895000,
+            "origin_country": "SS",
+            "destination_country": "UG",
+            "parties": ["juba_oil_corp", "intermediary_ke"],
+            "timestamp": "2025-04-08T09:16:28.091122",
+            "intermediate_countries": ["KE", "ET"]
+        },
+        "customer": {
+            "name": "Kampala Energy Imports",
+            "account_age_days": 36,
+            "transaction_history": []
+        },
+        "scenario": "Sanctioned entity bypass"
+    },
+    {
+        "transaction": {
+            "amount": 9925,
+            "origin_country": "TH",
+            "destination_country": "LA",
+            "parties": ["bangkok_trading"],
+            "timestamp": "2025-04-09T00:30:05.102233",
+            "documents": ["Invoice #BT-8823"],
+            "frequency": 21
+        },
+        "customer": {
+            "name": "Somchai Pattana",
+            "account_age_days": 189,
+            "transaction_history": [
+                {"amount": 9825, "timestamp": "2025-04-08T22:30:05.102233"},
+                {"amount": 9975, "timestamp": "2025-04-08T20:30:05.102233"}
+            ]
+        },
+        "scenario": "Repeated sub-threshold transactions (structuring)"
+    },
+    {
+        "transaction": {
+            "amount": 198000,
+            "origin_country": "NE",
+            "destination_country": "BF",
+            "parties": ["niamey_exports"],
+            "timestamp": "2025-04-09T01:35:16.213344",
+            "documents": ["Trade Agreement #NE-334"]
+        },
+        "customer": {
+            "name": "Boubacar Moussa",
+            "account_age_days": 57,
+            "transaction_history": []
+        },
+        "scenario": "High-risk country transaction"
+    },
+    {
+        "transaction": {
+            "amount": 795000,
+            "origin_country": "GN",
+            "destination_country": "CN",
+            "parties": ["guinea_mining_ministry"],
+            "timestamp": "2025-04-09T02:40:27.324455",
+            "documents": ["Contract GN-MIN-2025"]
+        },
+        "customer": {
+            "name": "Colonel Mamady Doumbouya Gov",
+            "account_age_days": 22,
+            "transaction_history": []
+        },
+        "scenario": "PEP transaction"
+    },
+    {
+        "transaction": {
+            "amount": 225000,
+            "asset_type": "CRYPTO",
+            "crypto_details": {
+                "wallet_age_days": 2,
+                "mixer_used": true,
+                "cross_chain_swaps": 9
+            },
+            "timestamp": "2025-04-09T03:45:38.435566"
+        },
+        "customer": {
+            "name": "JoinMarket Platform",
+            "account_age_days": 17,
+            "transaction_history": []
+        },
+        "scenario": "Cryptocurrency mixer usage"
+    },
+    {
+        "transaction": {
+            "amount": 585000,
+            "origin_country": "MA",
+            "destination_country": "ES",
+            "parties": ["casablanca_phosphates"],
+            "timestamp": "2025-04-09T04:50:49.546677",
+            "documents": [
+                "Invoice #CP-2234 (3000 tons @ $195/ton)",
+                "Customs Valuation Report (Actual Value: $355k)"
+            ]
+        },
+        "customer": {
+            "name": "Madrid Chemical Industries",
+            "account_age_days": 88,
+            "transaction_history": []
+        },
+        "scenario": "Trade invoice mismatch"
+    },
+    {
+        "transaction": {
+            "amount": 425000,
+            "origin_country": "MU",
+            "destination_country": "LU",
+            "parties": ["port_louis_holdings"],
+            "timestamp": "2025-04-09T05:56:00.657788"
+        },
+        "customer": {
+            "name": "Luxembourg Investment Partners",
+            "account_age_days": 9,
+            "transaction_history": [
+                {"amount": 440000, "timestamp": "2025-04-08T17:56:00.657788"}
+            ]
+        },
+        "scenario": "New account with high-value transactions"
+    },
+    {
+        "transaction": {
+            "amount": 145000,
+            "origin_country": "PT",
+            "destination_country": "VG",
+            "parties": ["lisbon_legal", "bvi_trust_2", "shell_co_27", "shell_co_28"],
+            "timestamp": "2025-04-09T07:01:11.768899",
+            "intermediate_countries": ["IM", "GI"]
+        },
+        "customer": {
+            "name": "Portuguese Business Group",
+            "account_age_days": 228,
+            "transaction_history": []
+        },
+        "scenario": "Complex payment chain through tax havens"
+    },
+    {
+        "transaction": {
+            "amount": 375000,
+            "origin_country": "AO",
+            "destination_country": "PT",
+            "parties": ["luanda_wildlife"],
+            "timestamp": "2025-04-09T08:06:22.879900",
+            "documents": ["Protected Bird Export #PB-445"]
+        },
+        "customer": {
+            "name": "Lisbon Exotic Collections",
+            "account_age_days": 66,
+            "transaction_history": []
+        },
+        "scenario": "Wildlife trafficking proceeds"
+    },
+    {
+        "transaction": {
+            "amount": 2150000,
+            "origin_country": "IQ",
+            "destination_country": "TR",
+            "parties": ["basra_petroleum", "intermediary_jo"],
+            "timestamp": "2025-04-09T09:11:33.990011",
+            "intermediate_countries": ["JO", "SY"]
+        },
+        "customer": {
+            "name": "Ankara Energy Trading",
+            "account_age_days": 38,
+            "transaction_history": []
+        },
+        "scenario": "Sanctioned entity bypass"
+    },
+    {
+        "transaction": {
+            "amount": 9580,
+            "origin_country": "HU",
+            "destination_country": "RO",
+            "parties": ["budapest_suppliers"],
+            "timestamp": "2025-04-10T00:25:10.091122",
+            "documents": ["Invoice #BS-5512"],
+            "frequency": 22
+        },
+        "customer": {
+            "name": "Ion Popescu",
+            "account_age_days": 196,
+            "transaction_history": [
+                {"amount": 9480, "timestamp": "2025-04-09T22:25:10.091122"},
+                {"amount": 9680, "timestamp": "2025-04-09T20:25:10.091122"}
+            ]
+        },
+        "scenario": "Repeated sub-threshold transactions (structuring)"
+    },
+    {
+        "transaction": {
+            "amount": 172000,
+            "origin_country": "GM",
+            "destination_country": "SN",
+            "parties": ["banjul_merchants"],
+            "timestamp": "2025-04-10T01:30:21.102233",
+            "documents": ["Trade Agreement #GM-556"]
+        },
+        "customer": {
+            "name": "Lamin Jatta",
+            "account_age_days": 45,
+            "transaction_history": []
+        },
+        "scenario": "High-risk country transaction"
+    },
+    {
+        "transaction": {
+            "amount": 870000,
+            "origin_country": "MR",
+            "destination_country": "MA",
+            "parties": ["mauritania_iron_ministry"],
+            "timestamp": "2025-04-10T02:35:32.213344",
+            "documents": ["Contract MR-IRON-2025"]
+        },
+        "customer": {
+            "name": "Minister Abdessalam Saleh Gov",
+            "account_age_days": 24,
+            "transaction_history": []
+        },
+        "scenario": "PEP transaction"
+    },
+    {
+        "transaction": {
+            "amount": 188000,
+            "asset_type": "CRYPTO",
+            "crypto_details": {
+                "wallet_age_days": 5,
+                "mixer_used": true,
+                "cross_chain_swaps": 8
+            },
+            "timestamp": "2025-04-10T03:40:43.324455"
+        },
+        "customer": {
+            "name": "Helix Mixer Services",
+            "account_age_days": 28,
+            "transaction_history": []
+        },
+        "scenario": "Cryptocurrency mixer usage"
+    },
+    {
+        "transaction": {
+            "amount": 9800,
+            "origin_country": "US",
+            "destination_country": "MX",
+            "parties": ["electronics_depot"],
+            "timestamp": "2025-03-28T10:15:22.123456",
+            "documents": ["Invoice #ELD-9823"],
+            "frequency": 12
+        },
+        "customer": {
+            "name": "Maria Rodriguez",
+            "account_age_days": 95,
+            "transaction_history": [
+                {"amount": 9700, "timestamp": "2025-03-28T08:15:22.123456"},
+                {"amount": 9850, "timestamp": "2025-03-28T06:15:22.123456"}
+            ]
+        },
+        "scenario": "Repeated sub-threshold transactions (structuring)"
+    },
+    {
+        "transaction": {
+            "amount": 180000,
+            "origin_country": "SY",
+            "destination_country": "FR",
+            "parties": ["damascus_traders"],
+            "timestamp": "2025-03-28T11:20:33.234567",
+            "documents": ["Trade Agreement #SY-456"]
+        },
+        "customer": {
+            "name": "Omar Hassan",
+            "account_age_days": 38,
+            "transaction_history": []
+        },
+        "scenario": "High-risk country transaction"
+    },
+    {
+        "transaction": {
+            "amount": 750000,
+            "origin_country": "VE",
+            "destination_country": "PT",
+            "parties": ["venezuela_oil_ministry"],
+            "timestamp": "2025-03-28T12:30:44.345678",
+            "documents": ["Contract VE-GOV-2025"]
+        },
+        "customer": {
+            "name": "General Carlos Martinez Gov",
+            "account_age_days": 15,
+            "transaction_history": []
+        },
+        "scenario": "PEP transaction"
+    },
+    {
+        "transaction": {
+            "amount": 220000,
+            "asset_type": "CRYPTO",
+            "crypto_details": {
+                "wallet_age_days": 2,
+                "mixer_used": true,
+                "cross_chain_swaps": 6
+            },
+            "timestamp": "2025-03-28T13:45:55.456789"
+        },
+        "customer": {
+            "name": "CryptoVault Services",
+            "account_age_days": 25,
+            "transaction_history": []
+        },
+        "scenario": "Cryptocurrency mixer usage"
+    },
+    {
+        "transaction": {
+            "amount": 475000,
+            "origin_country": "EG",
+            "destination_country": "SA",
+            "parties": ["cairo_steel"],
+            "timestamp": "2025-04-02T09:26:14.213344",
+            "documents": [
+                "Invoice #CS-6678 (200 tons @ $2,375/ton)",
+                "Customs Valuation Report (Actual Value: $290k)"
+            ]
+        },
+        "customer": {
+            "name": "Jeddah Construction Ltd",
+            "account_age_days": 81,
+            "transaction_history": []
+        },
+        "scenario": "Trade invoice mismatch"
+    },
+    {
+        "transaction": {
+            "amount": 410000,
+            "origin_country": "JO",
+            "destination_country": "GG",
+            "parties": ["amman_capital"],
+            "timestamp": "2025-04-02T10:31:25.324455"
+        },
+        "customer": {
+            "name": "Guernsey Trust Corporation",
+            "account_age_days": 8,
+            "transaction_history": [
+                {"amount": 420000, "timestamp": "2025-04-01T22:31:25.324455"}
+            ]
+        },
+        "scenario": "New account with high-value transactions"
+    },
+    {
+        "transaction": {
+            "amount": 115000,
+            "origin_country": "SE",
+            "destination_country": "MS",
+            "parties": ["stockholm_advisors", "montserrat_shell", "shell_co_13", "shell_co_14"],
+            "timestamp": "2025-04-02T11:36:36.435566",
+            "intermediate_countries": ["GI", "JE"]
+        },
+        "customer": {
+            "name": "Swedish Corporate Services",
+            "account_age_days": 142,
+            "transaction_history": []
+        },
+        "scenario": "Complex payment chain through tax havens"
+    },
+    {
+        "transaction": {
+            "amount": 325000,
+            "origin_country": "CD",
+            "destination_country": "BE",
+            "parties": ["kinshasa_minerals"],
+            "timestamp": "2025-04-02T12:41:47.546677",
+            "documents": ["Gorilla Hand Export #GH-778"]
+        },
+        "customer": {
+            "name": "Brussels Rare Specimens",
+            "account_age_days": 53,
+            "transaction_history": []
+        },
+        "scenario": "Wildlife trafficking proceeds"
+    },
+    {
+        "transaction": {
+            "amount": 2325000,
+            "origin_country": "YE",
+            "destination_country": "OM",
+            "parties": ["sanaa_arms_dealer", "intermediary_dj"],
+            "timestamp": "2025-04-07T09:22:23.102233",
+            "intermediate_countries": ["DJ", "SO"]
+        },
+        "customer": {
+            "name": "Muscat Defense Trading",
+            "account_age_days": 35,
+            "transaction_history": []
+        },
+        "scenario": "Sanctioned entity bypass"
+    },
+    {
+        "transaction": {
+            "amount": 9370,
+            "origin_country": "ZA",
+            "destination_country": "NA",
+            "parties": ["johannesburg_exports"],
+            "timestamp": "2025-04-08T00:35:00.213344",
+            "documents": ["Invoice #JE-3345"],
+            "frequency": 20
+        },
+        "customer": {
+            "name": "Petrus van Wyk",
+            "account_age_days": 177,
+            "transaction_history": [
+                {"amount": 9270, "timestamp": "2025-04-07T22:35:00.213344"},
+                {"amount": 9470, "timestamp": "2025-04-07T20:35:00.213344"}
+            ]
+        },
+        "scenario": "Repeated sub-threshold transactions (structuring)"
+    },
+    {
+        "transaction": {
+            "amount": 215000,
+            "origin_country": "CF",
+            "destination_country": "CM",
+            "parties": ["bangui_merchants"],
+            "timestamp": "2025-04-08T01:40:11.324455",
+            "documents": ["Trade Agreement #CF-991"]
+        },
+        "customer": {
+            "name": "André Nzapali",
+            "account_age_days": 49,
+            "transaction_history": []
+        },
+        "scenario": "High-risk country transaction"
+    },
+    {
+        "transaction": {
+            "amount": 655000,
+            "origin_country": "CG",
+            "destination_country": "FR",
+            "parties": ["congo_oil_ministry"],
+            "timestamp": "2025-04-08T02:45:22.435566",
+            "documents": ["Contract CG-OIL-2025"]
+        },
+        "customer": {
+            "name": "Minister Bruno Itoua Gov",
+            "account_age_days": 21,
+            "transaction_history": []
+        },
+        "scenario": "PEP transaction"
+    },
+    {
+        "transaction": {
+            "amount": 158000,
+            "asset_type": "CRYPTO",
+            "crypto_details": {
+                "wallet_age_days": 4,
+                "mixer_used": true,
+                "cross_chain_swaps": 6
+            },
+            "timestamp": "2025-04-08T03:50:33.546677"
+        },
+        "customer": {
+            "name": "CoinJoin Services LLC",
+            "account_age_days": 21,
+            "transaction_history": []
+        },
+        "scenario": "Cryptocurrency mixer usage"
+    },
+    {
+        "transaction": {
+            "amount": 458000,
+            "origin_country": "NP",
+            "destination_country": "BD",
+            "parties": ["kathmandu_textiles"],
+            "timestamp": "2025-04-08T04:55:44.657788",
+            "documents": [
+                "Invoice #KT-7712 (2500kg @ $183.20/kg)",
+                "Customs Valuation Report (Actual Value: $278k)"
+            ]
+        },
+        "customer": {
+            "name": "Dhaka Fashion Imports",
+            "account_age_days": 84,
+            "transaction_history": []
+        },
+        "scenario": "Trade invoice mismatch"
+    },
+    {
+        "transaction": {
+            "amount": 385000,
+            "origin_country": "MV",
+            "destination_country": "MC",
+            "parties": ["male_investments"],
+            "timestamp": "2025-04-08T06:00:55.768899"
+        },
+        "customer": {
+            "name": "Monaco Capital Trust",
+            "account_age_days": 8,
+            "transaction_history": [
+                {"amount": 400000, "timestamp": "2025-04-07T18:00:55.768899"}
+            ]
+        },
+        "scenario": "New account with high-value transactions"
+    },
+    {
+        "transaction": {
+            "amount": 118000,
+            "origin_country": "IE",
+            "destination_country": "BM",
+            "parties": ["dublin_advisors", "bermuda_trust_2", "shell_co_25", "shell_co_26"],
+            "timestamp": "2025-04-08T07:06:06.879900",
+            "intermediate_countries": ["GG", "KY"]
+        },
+        "customer": {
+            "name": "Irish Financial Services",
+            "account_age_days": 214,
+            "transaction_history": []
+        },
+        "scenario": "Complex payment chain through tax havens"
+    },
+    {
+        "transaction": {
+            "amount": 335000,
+            "origin_country": "SL",
+            "destination_country": "LB",
+            "parties": ["freetown_traders"],
+            "timestamp": "2025-04-08T08:11:17.990011",
+            "documents": ["Diamond Export #DI-667"]
+        },
+        "customer": {
+            "name": "Beirut Jewelry Exchange",
+            "account_age_days": 62,
+            "transaction_history": []
+        },
+        "scenario": "Wildlife trafficking proceeds"
+    },
+    {
+        "transaction": {
+            "amount": 1895000,
+            "origin_country": "SS",
+            "destination_country": "UG",
+            "parties": ["juba_oil_corp", "intermediary_ke"],
+            "timestamp": "2025-04-08T09:16:28.091122",
+            "intermediate_countries": ["KE", "ET"]
+        },
+        "customer": {
+            "name": "Kampala Energy Imports",
+            "account_age_days": 36,
+            "transaction_history": []
+        },
+        "scenario": "Sanctioned entity bypass"
+    },
+    {
+        "transaction": {
+            "amount": 9925,
+            "origin_country": "TH",
+            "destination_country": "LA",
+            "parties": ["bangkok_trading"],
+            "timestamp": "2025-04-09T00:30:05.102233",
+            "documents": ["Invoice #BT-8823"],
+            "frequency": 21
+        },
+        "customer": {
+            "name": "Somchai Pattana",
+            "account_age_days": 189,
+            "transaction_history": [
+                {"amount": 9825, "timestamp": "2025-04-08T22:30:05.102233"},
+                {"amount": 9975, "timestamp": "2025-04-08T20:30:05.102233"}
+            ]
+        },
+        "scenario": "Repeated sub-threshold transactions (structuring)"
+    },
+    {
+        "transaction": {
+            "amount": 198000,
+            "origin_country": "NE",
+            "destination_country": "BF",
+            "parties": ["niamey_exports"],
+            "timestamp": "2025-04-09T01:35:16.213344",
+            "documents": ["Trade Agreement #NE-334"]
+        },
+        "customer": {
+            "name": "Boubacar Moussa",
+            "account_age_days": 57,
+            "transaction_history": []
+        },
+        "scenario": "High-risk country transaction"
+    },
+    {
+        "transaction": {
+            "amount": 795000,
+            "origin_country": "GN",
+            "destination_country": "CN",
+            "parties": ["guinea_mining_ministry"],
+            "timestamp": "2025-04-09T02:40:27.324455",
+            "documents": ["Contract GN-MIN-2025"]
+        },
+        "customer": {
+            "name": "Colonel Mamady Doumbouya Gov",
+            "account_age_days": 22,
+            "transaction_history": []
+        },
+        "scenario": "PEP transaction"
+    },
+    {
+        "transaction": {
+            "amount": 225000,
+            "asset_type": "CRYPTO",
+            "crypto_details": {
+                "wallet_age_days": 2,
+                "mixer_used": true,
+                "cross_chain_swaps": 9
+            },
+            "timestamp": "2025-04-09T03:45:38.435566"
+        },
+        "customer": {
+            "name": "JoinMarket Platform",
+            "account_age_days": 17,
+            "transaction_history": []
+        },
+        "scenario": "Cryptocurrency mixer usage"
+    },
+    {
+        "transaction": {
+            "amount": 585000,
+            "origin_country": "MA",
+            "destination_country": "ES",
+            "parties": ["casablanca_phosphates"],
+            "timestamp": "2025-04-09T04:50:49.546677",
+            "documents": [
+                "Invoice #CP-2234 (3000 tons @ $195/ton)",
+                "Customs Valuation Report (Actual Value: $355k)"
+            ]
+        },
+        "customer": {
+            "name": "Madrid Chemical Industries",
+            "account_age_days": 88,
+            "transaction_history": []
+        },
+        "scenario": "Trade invoice mismatch"
+    },
+    {
+        "transaction": {
+            "amount": 425000,
+            "origin_country": "MU",
+            "destination_country": "LU",
+            "parties": ["port_louis_holdings"],
+            "timestamp": "2025-04-09T05:56:00.657788"
+        },
+        "customer": {
+            "name": "Luxembourg Investment Partners",
+            "account_age_days": 9,
+            "transaction_history": [
+                {"amount": 440000, "timestamp": "2025-04-08T17:56:00.657788"}
+            ]
+        },
+        "scenario": "New account with high-value transactions"
+    },
+    {
+        "transaction": {
+            "amount": 145000,
+            "origin_country": "PT",
+            "destination_country": "VG",
+            "parties": ["lisbon_legal", "bvi_trust_2", "shell_co_27", "shell_co_28"],
+            "timestamp": "2025-04-09T07:01:11.768899",
+            "intermediate_countries": ["IM", "GI"]
+        },
+        "customer": {
+            "name": "Portuguese Business Group",
+            "account_age_days": 228,
+            "transaction_history": []
+        },
+        "scenario": "Complex payment chain through tax havens"
+    },
+    {
+        "transaction": {
+            "amount": 375000,
+            "origin_country": "AO",
+            "destination_country": "PT",
+            "parties": ["luanda_wildlife"],
+            "timestamp": "2025-04-09T08:06:22.879900",
+            "documents": ["Protected Bird Export #PB-445"]
+        },
+        "customer": {
+            "name": "Lisbon Exotic Collections",
+            "account_age_days": 66,
+            "transaction_history": []
+        },
+        "scenario": "Wildlife trafficking proceeds"
+    },
+    {
+        "transaction": {
+            "amount": 2150000,
+            "origin_country": "IQ",
+            "destination_country": "TR",
+            "parties": ["basra_petroleum", "intermediary_jo"],
+            "timestamp": "2025-04-09T09:11:33.990011",
+            "intermediate_countries": ["JO", "SY"]
+        },
+        "customer": {
+            "name": "Ankara Energy Trading",
+            "account_age_days": 38,
+            "transaction_history": []
+        },
+        "scenario": "Sanctioned entity bypass"
+    },
+    {
+        "transaction": {
+            "amount": 9580,
+            "origin_country": "HU",
+            "destination_country": "RO",
+            "parties": ["budapest_suppliers"],
+            "timestamp": "2025-04-10T00:25:10.091122",
+            "documents": ["Invoice #BS-5512"],
+            "frequency": 22
+        },
+        "customer": {
+            "name": "Ion Popescu",
+            "account_age_days": 196,
+            "transaction_history": [
+                {"amount": 9480, "timestamp": "2025-04-09T22:25:10.091122"},
+                {"amount": 9680, "timestamp": "2025-04-09T20:25:10.091122"}
+            ]
+        },
+        "scenario": "Repeated sub-threshold transactions (structuring)"
+    },
+    {
+        "transaction": {
+            "amount": 172000,
+            "origin_country": "GM",
+            "destination_country": "SN",
+            "parties": ["banjul_merchants"],
+            "timestamp": "2025-04-10T01:30:21.102233",
+            "documents": ["Trade Agreement #GM-556"]
+        },
+        "customer": {
+            "name": "Lamin Jatta",
+            "account_age_days": 45,
+            "transaction_history": []
+        },
+        "scenario": "High-risk country transaction"
+    },
+    {
+        "transaction": {
+            "amount": 870000,
+            "origin_country": "MR",
+            "destination_country": "MA",
+            "parties": ["mauritania_iron_ministry"],
+            "timestamp": "2025-04-10T02:35:32.213344",
+            "documents": ["Contract MR-IRON-2025"]
+        },
+        "customer": {
+            "name": "Minister Abdessalam Saleh Gov",
+            "account_age_days": 24,
+            "transaction_history": []
+        },
+        "scenario": "PEP transaction"
+    },
+    {
+        "transaction": {
+            "amount": 188000,
+            "asset_type": "CRYPTO",
+            "crypto_details": {
+                "wallet_age_days": 5,
+                "mixer_used": true,
+                "cross_chain_swaps": 8
+            },
+            "timestamp": "2025-04-10T03:40:43.324455"
+        },
+        "customer": {
+            "name": "Helix Mixer Services",
+            "account_age_days": 28,
+            "transaction_history": []
+        },
+        "scenario": "Cryptocurrency mixer usage"
+    },
+    {
+        "transaction": {
+            "amount": 495000,
+            "origin_country": "KH",
+            "destination_country": "VN",
+            "parties": ["phnom_penh_rice"],
+            "timestamp": "2025-04-10T04:45:54.435566",
+            "documents": [
+                "Invoice #PPR-9934 (30000kg @ $16.50/kg)",
+                "Customs Valuation Report (Actual Value: $300k)"
+            ]
+        },
+        "customer": {
+            "name": "Ho Chi Minh Food Trading",
+            "account_age_days": 91,
+            "transaction_history": []
+        },
+        "scenario": "Trade invoice mismatch"
+    },
+    {
+        "transaction": {
+            "amount": 445000,
+            "origin_country": "SC",
+            "destination_country": "CY",
+            "parties": ["victoria_capital"],
+            "timestamp": "2025-04-10T05:51:05.546677"
+        },
+        "customer": {
+            "name": "Cyprus Offshore Holdings",
+            "account_age_days": 10,
+            "transaction_history": [
+                {"amount": 460000, "timestamp": "2025-04-09T17:51:05.546677"}
+            ]
+        },
+        "scenario": "New account with high-value transactions"
+    },
+    {
+        "transaction": {
+            "amount": 128000,
+            "origin_country": "GR",
+            "destination_country": "KY",
+            "parties": ["athens_consulting", "cayman_offshore_2", "shell_co_29", "shell_co_30"],
+            "timestamp": "2025-04-10T06:56:16.657788",
+            "intermediate_countries": ["MT", "PA"]
+        },
+        "customer": {
+            "name": "Greek Advisory Services",
+            "account_age_days": 241,
+            "transaction_history": []
+        },
+        "scenario": "Complex payment chain through tax havens"
+    },
+    {
+        "transaction": {
+            "amount": 315000,
+            "origin_country": "RW",
+            "destination_country": "MY",
+            "parties": ["kigali_exports"],
+            "timestamp": "2025-04-10T08:01:27.768899",
+            "documents": ["Mountain Gorilla Parts #MG-778"]
+        },
+        "customer": {
+            "name": "Kuala Lumpur Rare Items",
+            "account_age_days": 70,
+            "transaction_history": []
+        },
+        "scenario": "Wildlife trafficking proceeds"
+    },
+    {
+        "transaction": {
+            "amount": 1975000,
+            "origin_country": "HT",
+            "destination_country": "US",
+            "parties": ["port_au_prince_cartel", "intermediary_do"],
+            "timestamp": "2025-04-10T09:06:38.879900",
+            "intermediate_countries": ["DO", "BS"]
+        },
+        "customer": {
+            "name": "Miami Import Corporation",
+            "account_age_days": 41,
+            "transaction_history": []
+        },
+        "scenario": "Sanctioned entity bypass"
+    },
+    {
+        "transaction": {
+            "amount": 9675,
+            "origin_country": "SK",
+            "destination_country": "HU",
+            "parties": ["bratislava_trading"],
+            "timestamp": "2025-04-11T00:20:15.990011",
+            "documents": ["Invoice #BT-7789"],
+            "frequency": 23
+        },
+        "customer": {
+            "name": "László Kovács",
+            "account_age_days": 203,
+            "transaction_history": [
+                {"amount": 9575, "timestamp": "2025-04-10T22:20:15.990011"},
+                {"amount": 9775, "timestamp": "2025-04-10T20:20:15.990011"}
+            ]
+        },
+        "scenario": "Repeated sub-threshold transactions (structuring)"
+    },
+    {
+        "transaction": {
+            "amount": 162000,
+            "origin_country": "TG",
+            "destination_country": "GH",
+            "parties": ["lome_merchants"],
+            "timestamp": "2025-04-11T01:25:26.091122",
+            "documents": ["Trade Agreement #TG-223"]
+        },
+        "customer": {
+            "name": "Kwame Mensah",
+            "account_age_days": 52,
+            "transaction_history": []
+        },
+        "scenario": "High-risk country transaction"
+    },
+    {
+        "transaction": {
+            "amount": 735000,
+            "origin_country": "DJ",
+            "destination_country": "ET",
+            "parties": ["djibouti_port_authority"],
+            "timestamp": "2025-04-11T02:30:37.102233",
+            "documents": ["Contract DJ-PORT-2025"]
+        },
+        "customer": {
+            "name": "Director Aboubaker Hadi Gov",
+            "account_age_days": 26,
+            "transaction_history": []
+        },
+        "scenario": "PEP transaction"
+    },
+    {
+        "transaction": {
+            "amount": 242000,
+            "asset_type": "CRYPTO",
+            "crypto_details": {
+                "wallet_age_days": 3,
+                "mixer_used": true,
+                "cross_chain_swaps": 7
+            },
+            "timestamp": "2025-04-11T03:35:48.213344"
+        },
+        "customer": {
+            "name": "PrivacySwap Protocol",
+            "account_age_days": 23,
+            "transaction_history": []
+        },
+        "scenario": "Cryptocurrency mixer usage"
+    },
+    {
+        "transaction": {
+            "amount": 625000,
+            "origin_country": "MM",
+            "destination_country": "TH",
+            "parties": ["yangon_jade"],
+            "timestamp": "2025-04-11T04:40:59.324455",
+            "documents": [
+                "Invoice #YJ-4467 (500kg @ $1,250/kg)",
+                "Customs Valuation Report (Actual Value: $380k)"
+            ]
+        },
+        "customer": {
+            "name": "Bangkok Gemstone Trading",
+            "account_age_days": 94,
+            "transaction_history": []
+        },
+        "scenario": "Trade invoice mismatch"
+    },
+    {
+        "transaction": {
+            "amount": 465000,
+            "origin_country": "KN",
+            "destination_country": "LI",
+            "parties": ["basseterre_investments"],
+            "timestamp": "2025-04-11T05:46:10.435566"
+        },
+        "customer": {
+            "name": "Liechtenstein Asset Management",
+            "account_age_days": 11,
+            "transaction_history": [
+                {"amount": 480000, "timestamp": "2025-04-10T17:46:10.435566"}
+            ]
+        },
+        "scenario": "New account with high-value transactions"
+    },
+    {
+        "transaction": {
+            "amount": 155000,
+            "origin_country": "LU",
+            "destination_country": "BS",
+            "parties": ["luxembourg_wealth", "nassau_trust_2", "shell_co_31", "shell_co_32"],
+            "timestamp": "2025-04-11T06:51:21.546677",
+            "intermediate_countries": ["JE", "BM"]
+        },
+        "customer": {
+            "name": "Luxembourg Private Banking",
+            "account_age_days": 255,
+            "transaction_history": []
+        },
+        "scenario": "Complex payment chain through tax havens"
+    },
+    {
+        "transaction": {
+            "amount": 395000,
+            "origin_country": "BO",
+            "destination_country": "CN",
+            "parties": ["la_paz_traders"],
+            "timestamp": "2025-04-11T07:56:32.657788",
+            "documents": ["Jaguar Skin Export #JS-991"]
+        },
+        "customer": {
+            "name": "Shanghai Luxury Goods",
+            "account_age_days": 74,
+            "transaction_history": []
+        },
+        "scenario": "Wildlife trafficking proceeds"
+    },
+    {
+        "transaction": {
+            "amount": 2275000,
+            "origin_country": "NG",
+            "destination_country": "GB",
+            "parties": ["lagos_oil_baron", "intermediary_gh"],
+            "timestamp": "2025-04-11T09:01:43.768899",
+            "intermediate_countries": ["GH", "SN"]
+        },
+        "customer": {
+            "name": "London Energy Ventures",
+            "account_age_days": 44,
+            "transaction_history": []
+        },
+        "scenario": "Sanctioned entity bypass"
+    }
+
+]
