@@ -53,6 +53,7 @@ st.markdown("""
     .structuring { background-color: #ff6b6b; color: white; }
     .layering { background-color: #4ecdc4; color: white; }
     .integration { background-color: #45b7d1; color: white; }
+    .placement { background-color: #ffa726; color: white; }
     .unclassified { background-color: #6c757d; color: white; }
     .insight-card {
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -104,11 +105,43 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-df = pd.read_csv('aml_report_with_typology.csv')
+df = pd.read_csv('aml_report.csv')
 
-# Clean and prepare the data
-df['Typology'] = df['Typology'].fillna('UNCLASSIFIED')
-df['Typology Rationale'] = df['Typology Rationale'].fillna('No rationale provided')
+# Create typology mapping based on scenario patterns
+def classify_typology(scenario):
+    scenario_lower = scenario.lower()
+    if 'structuring' in scenario_lower or 'sub-threshold' in scenario_lower:
+        return 'STRUCTURING'
+    elif 'payment chain' in scenario_lower or 'tax havens' in scenario_lower:
+        return 'LAYERING'
+    elif 'wildlife' in scenario_lower or 'trafficking' in scenario_lower:
+        return 'INTEGRATION'
+    elif 'sanctioned' in scenario_lower or 'bypass' in scenario_lower:
+        return 'INTEGRATION'
+    elif 'cryptocurrency' in scenario_lower or 'mixer' in scenario_lower:
+        return 'LAYERING'
+    elif 'pep' in scenario_lower or 'high-value' in scenario_lower:
+        return 'PLACEMENT'
+    elif 'trade' in scenario_lower or 'invoice' in scenario_lower:
+        return 'LAYERING'
+    elif 'high-risk' in scenario_lower or 'country' in scenario_lower:
+        return 'PLACEMENT'
+    else:
+        return 'UNCLASSIFIED'
+
+def generate_typology_rationale(scenario, typology):
+    rationale_map = {
+        'STRUCTURING': 'Breaking down large transactions into smaller amounts to avoid reporting thresholds',
+        'LAYERING': 'Complex transactions to obscure the origin of illicit funds',
+        'INTEGRATION': 'Reintroducing laundered funds into the legitimate economy',
+        'PLACEMENT': 'Initial placement of illicit funds into the financial system',
+        'UNCLASSIFIED': 'Requires further analysis for typology classification'
+    }
+    return f"Based on scenario '{scenario}': {rationale_map.get(typology, rationale_map['UNCLASSIFIED'])}"
+
+# Create typology columns based on scenario analysis
+df['Typology'] = df['Scenario'].apply(classify_typology)
+df['Typology Rationale'] = df.apply(lambda row: generate_typology_rationale(row['Scenario'], row['Typology']), axis=1)
 
 # Create a mapping for typology colors and descriptions
 typology_info = {
@@ -126,6 +159,11 @@ typology_info = {
         'color': '#45b7d1',
         'description': 'Reintroducing laundered funds into the legitimate economy',
         'stage': 'Integration'
+    },
+    'PLACEMENT': {
+        'color': '#ffa726',
+        'description': 'Initial placement of illicit funds into the financial system',
+        'stage': 'Placement'
     },
     'UNCLASSIFIED': {
         'color': '#6c757d',
@@ -280,6 +318,8 @@ def get_typology_badge_class(typology):
         return 'layering'
     elif typology_lower == 'integration':
         return 'integration'
+    elif typology_lower == 'placement':
+        return 'placement'
     else:
         return 'unclassified'
 
